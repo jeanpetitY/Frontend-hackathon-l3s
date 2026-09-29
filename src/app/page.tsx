@@ -1,5 +1,5 @@
-import { OralEvalApp } from "@/components/exam/oral-eval-app";
+import { ConnectedPythonDemo } from "@/components/demo/connected-python-demo";
 
 export default function HomePage() {
-  return <OralEvalApp />;
+  return <ConnectedPythonDemo />;
 }

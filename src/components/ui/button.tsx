@@ -7,15 +7,15 @@ type ButtonProps = ButtonHTMLAttributes<HTMLButtonElement> & {
 };
 
 const variants = {
-  primary: "bg-[#ef5b60] text-white shadow-[0_10px_22px_rgba(239,91,96,0.2)] hover:-translate-y-0.5 hover:bg-[#df4d52]",
-  secondary: "border border-slate-200 bg-white text-slate-700 shadow-sm hover:border-slate-300 hover:bg-slate-50 dark:border-slate-600 dark:bg-[#22262e] dark:text-slate-200 dark:hover:bg-[#2a2f39]",
-  ghost: "text-slate-600 hover:bg-slate-100 hover:text-slate-900 dark:text-slate-300 dark:hover:bg-slate-800 dark:hover:text-white",
+  primary: "bg-[#e9545a] text-white shadow-[0_8px_20px_rgba(218,63,71,0.18)] hover:-translate-y-px hover:bg-[#d9484e] hover:shadow-[0_12px_26px_rgba(218,63,71,0.27)] active:translate-y-0 active:bg-[#c94046] dark:hover:bg-[#f06469]",
+  secondary: "border border-slate-300 bg-white text-slate-700 shadow-sm hover:-translate-y-px hover:border-rose-300 hover:bg-rose-50 hover:text-rose-700 hover:shadow-md active:translate-y-0 dark:border-slate-600 dark:bg-[#202630] dark:text-slate-100 dark:hover:border-rose-800 dark:hover:bg-rose-950/25 dark:hover:text-rose-200",
+  ghost: "text-slate-600 hover:bg-slate-100 hover:text-slate-950 dark:text-slate-300 dark:hover:bg-slate-800 dark:hover:text-white",
 };
 
 export function Button({ children, className = "", variant = "primary", fullWidth, ...props }: ButtonProps) {
   return (
     <button
-      className={`inline-flex min-h-12 items-center justify-center gap-2 rounded-xl px-5 text-sm font-semibold transition duration-200 disabled:cursor-not-allowed disabled:opacity-45 disabled:hover:translate-y-0 ${variants[variant]} ${fullWidth ? "w-full" : ""} ${className}`}
+      className={`inline-flex min-h-11 cursor-pointer items-center justify-center gap-2 rounded-lg px-5 text-sm font-semibold transition duration-200 disabled:cursor-not-allowed disabled:opacity-45 disabled:hover:translate-y-0 disabled:hover:shadow-none ${variants[variant]} ${fullWidth ? "w-full" : ""} ${className}`}
       {...props}
     >
       {children}
