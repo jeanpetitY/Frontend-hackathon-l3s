@@ -1,0 +1,209 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1536" height="1024" viewBox="0 0 1536 1024" fill="none">
+  <title>OralEval Architecture</title>
+  <desc>Course-aware, evidence-grounded adaptive oral assessment architecture with professor, AI agent, student, traceable outcomes, and trusted platform infrastructure.</desc>
+  <defs>
+    <linearGradient id="head" x1="0" y1="0" x2="1536" y2="94" gradientUnits="userSpaceOnUse"><stop stop-color="#1E293B"/><stop offset="1" stop-color="#334155"/></linearGradient>
+    <linearGradient id="agentBg" x1="377" y1="380" x2="1344" y2="776" gradientUnits="userSpaceOnUse"><stop stop-color="#FFF9F9"/><stop offset="1" stop-color="#FFF0F1"/></linearGradient>
+    <filter id="shadow" x="-20%" y="-20%" width="140%" height="140%"><feDropShadow dx="0" dy="3" stdDeviation="5" flood-color="#334155" flood-opacity=".12"/></filter>
+    <marker id="a" markerWidth="9" markerHeight="9" refX="8" refY="4.5" orient="auto"><path d="M0 0 9 4.5 0 9Z" fill="#213B69"/></marker>
+    <marker id="ar" markerWidth="9" markerHeight="9" refX="8" refY="4.5" orient="auto"><path d="M0 0 9 4.5 0 9Z" fill="#EF4655"/></marker>
+    <marker id="aw" markerWidth="9" markerHeight="9" refX="8" refY="4.5" orient="auto"><path d="M0 0 9 4.5 0 9Z" fill="#EAF1FF"/></marker>
+    <style>
+      text{font-family:"Ubuntu Sans",Ubuntu,"Segoe UI",Arial,sans-serif;fill:#14213D}
+      .title{font-size:34px;font-weight:650;fill:#fff;letter-spacing:-.4px}.subtitle{font-size:17px;font-weight:450;fill:#fff;fill-opacity:.86}
+      .section{font-size:15px;font-weight:700}.cardTitle{font-size:13px;font-weight:700}.body{font-size:12px;font-weight:450}.small{font-size:10.5px;font-weight:450}.tiny{font-size:9px;font-weight:500}
+      .white{fill:#fff}.blue{fill:#165DFF}.red{fill:#EF4655}.muted{fill:#52627D}
+      .frame{fill:#F7FAFE;stroke:#B7D1EF;stroke-width:1}.card{fill:#fff;stroke:#C8D8EB;stroke-width:1}.soft{fill:#F1F5F9;stroke:#D8E2EE;stroke-width:.8}.agent{fill:url(#agentBg);stroke:#EF4655;stroke-width:1.4;stroke-dasharray:5 4}
+      .flow{stroke:#213B69;stroke-width:1.6;stroke-linecap:round;stroke-linejoin:round;fill:none;marker-end:url(#a)}.ai{stroke:#EF4655;stroke-width:1.6;stroke-dasharray:6 4;stroke-linecap:round;stroke-linejoin:round;fill:none;marker-end:url(#ar)}.policy{stroke:#52627D;stroke-width:1.3;stroke-dasharray:4 4;stroke-linecap:round;stroke-linejoin:round;fill:none;marker-end:url(#a)}
+    </style>
+  </defs>
+
+  <rect width="1536" height="1024" fill="#F5F8FC"/>
+  <rect width="1536" height="94" fill="url(#head)"/>
+  <text x="36" y="44" class="title">OralEval — Architecture</text>
+  <text x="36" y="70" class="subtitle">Course-aware, evidence-grounded, adaptive oral assessment</text>
+
+  <!-- Header roles -->
+  <rect x="648" y="12" width="189" height="73" rx="13" fill="#fff" fill-opacity=".08" stroke="#fff" stroke-opacity=".22"/>
+  <circle cx="676" cy="42" r="15" fill="#fff" fill-opacity=".13"/><circle cx="676" cy="37" r="6" fill="#fff"/><path d="M666 53c2-7 5-10 10-10s8 3 10 10" fill="#fff"/>
+  <text x="701" y="31" class="cardTitle white">PROFESSOR</text><text x="701" y="46" class="small white">Create courses</text><text x="701" y="60" class="small white">Design assessments</text><text x="701" y="74" class="small white">Review results</text>
+  <rect x="855" y="12" width="190" height="73" rx="13" fill="#EF4655" stroke="#FF8D96"/>
+  <circle cx="886" cy="42" r="17" fill="#fff" fill-opacity=".18"/><text x="875" y="49" font-size="18" font-weight="650" class="white">AI</text>
+  <text x="915" y="31" class="cardTitle white">AI AGENT</text><text x="915" y="47" class="small white">Analyze · Generate</text><text x="915" y="62" class="small white">Examine · Evaluate</text>
+  <rect x="1062" y="12" width="189" height="73" rx="13" fill="#4938FF" stroke="#776BFF"/>
+  <circle cx="1093" cy="42" r="17" fill="#fff" fill-opacity=".18"/><circle cx="1093" cy="37" r="6" fill="#fff"/><path d="M1083 53c2-7 5-10 10-10s8 3 10 10" fill="#fff"/>
+  <text x="1122" y="31" class="cardTitle white">STUDENT</text><text x="1122" y="47" class="small white">Submit work</text><text x="1122" y="61" class="small white">Take oral examination</text><text x="1122" y="75" class="small white">View feedback</text>
+  <path d="M1295 26H1359" stroke="#EAF1FF" stroke-width="1.5" marker-end="url(#aw)"/><text x="1371" y="31" class="small white">Verified data flow</text>
+  <path d="M1295 51H1359" stroke="#EF4655" stroke-width="1.6" stroke-dasharray="6 4" marker-end="url(#ar)"/><text x="1371" y="56" class="small white">AI operation</text>
+  <path d="M1295 75H1359" stroke="#EAF1FF" stroke-width="1.3" stroke-dasharray="4 4" marker-end="url(#aw)"/><text x="1371" y="80" class="small white">Policy / Access</text>
+
+  <!-- Section 1 -->
+  <rect x="14" y="104" width="1263" height="253" rx="12" class="frame"/>
+  <circle cx="41" cy="119" r="13" fill="#324F7F"/><text x="37" y="124" class="cardTitle white">1</text>
+  <text x="68" y="123" class="section">COURSE &amp; ASSESSMENT DESIGN (Professor)</text><text x="68" y="141" class="body muted">Define the context, materials and evaluation criteria</text>
+
+  <rect x="36" y="148" width="171" height="190" rx="9" class="card" filter="url(#shadow)"/>
+  <text x="87" y="174" class="cardTitle">Course Studio</text>
+  <rect x="49" y="184" width="145" height="25" rx="5" fill="#EFF4FA"/><text x="77" y="201" class="small">Create course</text>
+  <rect x="49" y="213" width="145" height="25" rx="5" fill="#EFF4FA"/><text x="77" y="230" class="small">Set course type</text>
+  <rect x="49" y="242" width="145" height="22" rx="5" fill="#E9F2FF"/><text x="77" y="257" class="small">Seminar</text>
+  <rect x="49" y="267" width="145" height="22" rx="5" fill="#EAF8EE"/><text x="77" y="282" class="small">Literature / Homework</text>
+  <rect x="49" y="292" width="145" height="22" rx="5" fill="#FFF3D8"/><text x="77" y="307" class="small">Thesis (MSc / PhD)</text>
+  <rect x="49" y="317" width="145" height="17" rx="5" fill="#F0E9FF"/><text x="77" y="330" class="small">Programming</text>
+
+  <rect x="234" y="148" width="254" height="190" rx="9" class="card" filter="url(#shadow)"/>
+  <text x="275" y="174" class="cardTitle">Teaching Materials</text>
+  <rect x="248" y="184" width="226" height="25" rx="5" class="soft"/><text x="289" y="201" class="small">Lecture notes (PDF, PPT)</text>
+  <rect x="248" y="213" width="226" height="25" rx="5" class="soft"/><text x="289" y="230" class="small">Readings / Articles</text>
+  <rect x="248" y="242" width="226" height="25" rx="5" class="soft"/><text x="289" y="259" class="small">Code templates</text>
+  <rect x="248" y="271" width="226" height="25" rx="5" class="soft"/><text x="289" y="288" class="small">Example assignments</text>
+  <rect x="248" y="300" width="226" height="25" rx="5" class="soft"/><text x="289" y="317" class="small">Guidelines / Rubric examples</text>
+
+  <rect x="514" y="148" width="223" height="190" rx="9" class="card" filter="url(#shadow)"/>
+  <text x="556" y="174" class="cardTitle">Assessment Contract</text>
+  <rect x="528" y="184" width="195" height="25" rx="5" class="soft"/><text x="568" y="201" class="small">Task description</text>
+  <rect x="528" y="213" width="195" height="25" rx="5" class="soft"/><text x="568" y="230" class="small">Expected input format</text>
+  <rect x="528" y="242" width="195" height="25" rx="5" class="soft"/><text x="568" y="259" class="small">Allowed resources</text>
+  <rect x="528" y="271" width="195" height="25" rx="5" class="soft"/><text x="568" y="288" class="small">Deadline &amp; settings</text>
+
+  <rect x="768" y="148" width="244" height="190" rx="9" class="card" filter="url(#shadow)"/>
+  <text x="817" y="174" class="cardTitle">Evaluation Criteria (Rubric)</text>
+  <text x="817" y="198" class="body">Define criteria and weights</text><text x="817" y="214" class="body">or get AI suggestions</text>
+  <rect x="783" y="231" width="216" height="40" rx="6" fill="#FFF0F1" stroke="#FFB8BE"/><text x="850" y="247" class="small">AI suggests criteria</text><text x="850" y="261" class="small">from teaching materials</text>
+  <rect x="783" y="283" width="216" height="38" rx="6" fill="#EAF2FC"/><text x="850" y="307" class="small">Professor reviews &amp; edits</text>
+
+  <rect x="1039" y="148" width="216" height="165" rx="9" class="card" filter="url(#shadow)"/>
+  <text x="1091" y="174" class="cardTitle">Release &amp; Enrollment</text>
+  <rect x="1053" y="186" width="188" height="31" rx="5" class="soft"/><text x="1097" y="206" class="small">Publish assessment</text>
+  <rect x="1053" y="222" width="188" height="31" rx="5" class="soft"/><text x="1097" y="242" class="small">Enroll students</text>
+  <rect x="1053" y="258" width="188" height="42" rx="5" class="soft"/><text x="1097" y="276" class="small">Access control</text><text x="1097" y="291" class="small">enrolled students only</text>
+  <path d="M207 219H234M488 219H514M737 219H768M1012 219H1039M1255 219H1288" class="flow"/>
+
+  <!-- Student side panel -->
+  <rect x="1288" y="104" width="236" height="254" rx="10" fill="#EEF6FF" stroke="#9BC4F2"/>
+  <circle cx="1312" cy="119" r="13" fill="#324F7F"/><text x="1308" y="124" class="cardTitle white">4</text><text x="1337" y="126" class="section">Student</text><text x="1403" y="126" class="body">(End User)</text>
+  <rect x="1301" y="137" width="210" height="31" rx="6" fill="#fff"/><text x="1344" y="157" class="small">My courses (enrolled)</text>
+  <rect x="1301" y="173" width="210" height="31" rx="6" fill="#fff"/><text x="1344" y="193" class="small">View assessment details</text>
+  <rect x="1301" y="209" width="210" height="62" rx="6" fill="#fff"/><text x="1344" y="229" class="small">Submit work</text>
+  <rect x="1360" y="235" width="31" height="26" rx="5" fill="#FFF0F1"/><text x="1368" y="253" class="small red">PDF</text><rect x="1396" y="235" width="31" height="26" rx="5" fill="#EEF3FF"/><text x="1403" y="253" class="small">&lt;/&gt;</text><rect x="1432" y="235" width="31" height="26" rx="5" fill="#EEF3FF"/><text x="1442" y="253" class="small blue">▧</text><rect x="1468" y="235" width="31" height="26" rx="5" fill="#EEF3FF"/><text x="1478" y="253" class="small blue">▣</text>
+  <rect x="1301" y="276" width="210" height="31" rx="6" fill="#fff"/><text x="1344" y="296" class="small">Take oral examination (text / voice)</text>
+  <rect x="1301" y="312" width="210" height="31" rx="6" fill="#fff"/><text x="1344" y="332" class="small">View feedback &amp; results</text>
+
+  <!-- Context and policy connectors -->
+  <path d="M393 338V367H770V380" class="flow"/><text x="408" y="355" class="small muted">Course context (materials, rubric, constraints)</text>
+  <path d="M905 338V380" class="policy"/><text x="922" y="357" class="small muted">Assessment specification (rubric, policy, settings)</text>
+  <path d="M1218 313V367H1218V380" class="policy"/>
+
+  <!-- Section 2 -->
+  <rect x="14" y="370" width="1510" height="415" rx="12" class="frame"/>
+  <circle cx="41" cy="389" r="13" fill="#324F7F"/><text x="37" y="394" class="cardTitle white">2</text>
+  <text x="68" y="393" class="section">AI ASSESSMENT AGENT</text>
+  <text x="68" y="412" class="body muted">Single agent · multiple stages</text>
+
+  <!-- Student input -->
+  <rect x="25" y="447" width="174" height="259" rx="8" fill="#EEF6FF" stroke="#B7D7F4" filter="url(#shadow)"/>
+  <text x="68" y="471" class="cardTitle">Student Input</text><text x="82" y="504" class="small">Submission (per assessment)</text>
+  <text x="82" y="542" class="small">PDF report</text><text x="82" y="572" class="small">PPT slides</text><text x="82" y="602" class="small">Text document</text><text x="82" y="632" class="small">Code (Git, .ipynb)</text><text x="82" y="662" class="small">Images / figures</text><text x="82" y="692" class="small">Other formats</text>
+  <text x="52" y="542" font-size="16" class="red">▤</text><text x="52" y="572" font-size="16" fill="#F59E0B">▤</text><text x="52" y="602" font-size="16" class="blue">▤</text><text x="51" y="632" font-size="16">&lt;/&gt;</text><text x="52" y="662" font-size="16" class="blue">▧</text><text x="52" y="692" font-size="16" class="blue">▤</text>
+
+  <rect x="218" y="479" width="145" height="229" rx="8" class="card" filter="url(#shadow)"/>
+  <text x="252" y="505" class="cardTitle">Input Adapter</text><text x="245" y="521" class="cardTitle">&amp; Preprocessing</text>
+  <circle cx="235" cy="503" r="12" fill="#E8F1FF"/><text x="228" y="509" class="cardTitle blue">⚙</text>
+  <circle cx="231" cy="552" r="3" fill="#14213D"/><text x="244" y="556" class="small">Format parsing</text>
+  <circle cx="231" cy="580" r="3" fill="#14213D"/><text x="244" y="584" class="small">OCR (if needed)</text>
+  <circle cx="231" cy="608" r="3" fill="#14213D"/><text x="244" y="612" class="small">Structure normalization</text>
+  <circle cx="231" cy="636" r="3" fill="#14213D"/><text x="244" y="640" class="small">Metadata extraction</text>
+  <circle cx="231" cy="664" r="3" fill="#14213D"/><text x="244" y="668" class="small">Anonymization (PII)</text>
+  <path d="M199 578H218M363 578H390" class="flow"/>
+
+  <!-- Single agent enclosure -->
+  <rect x="377" y="380" width="967" height="396" rx="12" class="agent"/>
+  <circle cx="750" cy="411" r="28" fill="#FFE1E4"/><circle cx="750" cy="411" r="18" fill="#EF4655"/><text x="740" y="417" font-size="14" font-weight="700" class="white">AI</text>
+  <text x="788" y="410" font-size="16" font-weight="700" class="red">AI ASSESSMENT AGENT</text><text x="788" y="428" class="small red">Same agent across all stages, grounded in course context and rubric</text>
+
+  <!-- Analysis stage -->
+  <rect x="390" y="442" width="254" height="321" rx="9" fill="#fff" stroke="#FFB8BE"/>
+  <circle cx="408" cy="463" r="11" fill="#EF4655"/><text x="404" y="468" class="cardTitle white">1</text><text x="427" y="466" class="cardTitle">ANALYSIS</text><text x="427" y="481" class="small">Extract and understand the submission</text>
+  <rect x="399" y="493" width="234" height="42" rx="6" class="soft"/><text x="443" y="511" class="small">Course context</text><text x="443" y="526" class="small">(teaching materials, rubric)</text>
+  <rect x="399" y="541" width="234" height="32" rx="6" class="soft"/><text x="443" y="561" class="small">Student submission</text>
+  <path d="M475 573V592" class="flow"/>
+  <rect x="399" y="594" width="138" height="157" rx="7" fill="#FFF8F8" stroke="#FFC8CC"/>
+  <text x="410" y="613" class="small" font-weight="700">Extract key elements</text>
+  <circle cx="411" cy="633" r="2.5" fill="#14213D"/><text x="422" y="637" class="small">Claims / assertions</text>
+  <circle cx="411" cy="654" r="2.5" fill="#14213D"/><text x="422" y="658" class="small">Methods / approach</text>
+  <circle cx="411" cy="675" r="2.5" fill="#14213D"/><text x="422" y="679" class="small">Design decisions</text>
+  <circle cx="411" cy="696" r="2.5" fill="#14213D"/><text x="422" y="700" class="small">Results / findings</text>
+  <circle cx="411" cy="717" r="2.5" fill="#14213D"/><text x="422" y="721" class="small">Potential errors</text>
+  <circle cx="411" cy="738" r="2.5" fill="#14213D"/><text x="422" y="742" class="small">References &amp; citations</text>
+  <rect x="544" y="594" width="89" height="157" rx="7" class="soft"/><text x="560" y="613" class="small" font-weight="700">Assertion</text><text x="557" y="627" class="small" font-weight="700">&amp; Evidence</text><text x="570" y="641" class="small" font-weight="700">Graph</text>
+  <path d="M566 666L595 653L617 680L584 704L566 666M595 653L584 704M617 680L620 728M584 704L620 728" stroke="#4938FF" stroke-width="1.5"/><circle cx="566" cy="666" r="6" fill="#fff" stroke="#165DFF" stroke-width="2"/><circle cx="595" cy="653" r="6" fill="#fff" stroke="#4938FF" stroke-width="2"/><circle cx="617" cy="680" r="6" fill="#fff" stroke="#4938FF" stroke-width="2"/><circle cx="584" cy="704" r="6" fill="#fff" stroke="#EF4655" stroke-width="2"/><circle cx="620" cy="728" r="6" fill="#fff" stroke="#165DFF" stroke-width="2"/>
+
+  <!-- Question generation stage -->
+  <rect x="655" y="442" width="229" height="321" rx="9" fill="#fff" stroke="#FFB8BE"/>
+  <circle cx="675" cy="463" r="11" fill="#EF4655"/><text x="671" y="468" class="cardTitle white">2</text><text x="694" y="466" class="cardTitle">QUESTION GENERATION</text><text x="694" y="481" class="small">Personalized · criterion-linked</text>
+  <rect x="666" y="493" width="207" height="42" rx="6" class="soft"/><text x="709" y="511" class="small">Rubric / evaluation criteria</text><text x="709" y="526" class="small">(with weights)</text>
+  <rect x="666" y="541" width="207" height="42" rx="6" class="soft"/><text x="709" y="559" class="small">Extracted evidence</text><text x="709" y="574" class="small">(from stage 1)</text>
+  <path d="M769 583V600" class="flow"/>
+  <rect x="666" y="602" width="207" height="149" rx="7" fill="#FFF8F8" stroke="#FFD1D4"/>
+  <text x="678" y="620" class="small" font-weight="700">Categorized question set</text>
+  <rect x="676" y="628" width="88" height="21" rx="4" fill="#DDF5E4"/><text x="686" y="643" class="tiny">Understanding</text><text x="771" y="643" class="tiny muted">Explain concept / method</text>
+  <rect x="676" y="654" width="88" height="21" rx="4" fill="#FFF0BE"/><text x="686" y="669" class="tiny">Justification / Why</text><text x="771" y="669" class="tiny muted">Why this design decision?</text>
+  <rect x="676" y="680" width="88" height="21" rx="4" fill="#FFE0C9"/><text x="686" y="695" class="tiny">Evidence</text><text x="771" y="695" class="tiny muted">Show proof / results</text>
+  <rect x="676" y="706" width="88" height="21" rx="4" fill="#FFD5DC"/><text x="686" y="721" class="tiny">Challenge / Critique</text><text x="771" y="721" class="tiny muted">Identify limitations</text>
+  <rect x="676" y="732" width="88" height="16" rx="4" fill="#EADFFF"/><text x="686" y="744" class="tiny">Counterfactual</text><text x="771" y="744" class="tiny muted">What if assumptions change?</text>
+
+  <!-- Adaptive oral exam -->
+  <rect x="895" y="442" width="235" height="321" rx="9" fill="#fff" stroke="#FFB8BE"/>
+  <circle cx="915" cy="463" r="11" fill="#EF4655"/><text x="911" y="468" class="cardTitle white">3</text><text x="934" y="466" class="cardTitle">ADAPTIVE ORAL EXAMINATION</text><text x="934" y="481" class="small">Interact · probe · adapt</text>
+  <rect x="905" y="493" width="214" height="59" rx="6" class="soft"/><text x="934" y="513" class="small">Select next question</text><text x="934" y="528" class="small">based on answers, difficulty,</text><text x="934" y="543" class="small">criteria and evidence gaps</text>
+  <path d="M1012 552V576" class="flow"/>
+  <rect x="905" y="578" width="114" height="59" rx="7" fill="#FFF0F1" stroke="#FFB8BE"/><text x="950" y="599" class="tiny">Question</text><text x="922" y="616" class="small">linked to criteria &amp;</text><text x="943" y="630" class="small">evidence</text>
+  <rect x="1028" y="578" width="92" height="168" rx="7" fill="#EEF4FA" stroke="#CAD8E8"/><text x="1049" y="606" class="cardTitle">Exam State</text><circle cx="1043" cy="632" r="2.5" fill="#14213D"/><text x="1053" y="636" class="tiny">Asked questions</text><circle cx="1043" cy="653" r="2.5" fill="#14213D"/><text x="1053" y="657" class="tiny">Student answers</text><circle cx="1043" cy="674" r="2.5" fill="#14213D"/><text x="1053" y="678" class="tiny">Covered criteria</text><circle cx="1043" cy="695" r="2.5" fill="#14213D"/><text x="1053" y="699" class="tiny">Remaining gaps</text><circle cx="1043" cy="716" r="2.5" fill="#14213D"/><text x="1053" y="720" class="tiny">Difficulty</text><circle cx="1043" cy="737" r="2.5" fill="#14213D"/><text x="1053" y="741" class="tiny">Stop condition</text>
+  <path d="M962 637V650" class="flow"/>
+  <rect x="905" y="651" width="114" height="46" rx="7" fill="#E3F3FF" stroke="#9BCEF5"/><text x="927" y="670" class="small blue">Student answer</text><text x="938" y="686" class="small">text / voice</text>
+  <path d="M962 697V711" class="flow"/>
+  <rect x="905" y="712" width="114" height="40" rx="7" fill="#FFF0F1" stroke="#FFB8BE"/><text x="932" y="729" class="small">Follow-up question</text><text x="946" y="744" class="small">if needed</text>
+
+  <!-- Assessment stage -->
+  <rect x="1142" y="442" width="190" height="321" rx="9" fill="#fff" stroke="#FFB8BE"/>
+  <circle cx="1163" cy="463" r="11" fill="#EF4655"/><text x="1159" y="468" class="cardTitle white">4</text><text x="1182" y="466" class="cardTitle">ASSESSMENT</text><text x="1182" y="481" class="small">Criterion + evidence</text>
+  <rect x="1153" y="493" width="168" height="38" rx="6" class="soft"/><text x="1198" y="510" class="small">Student answers</text><text x="1198" y="525" class="small">(transcripts)</text>
+  <rect x="1153" y="536" width="168" height="38" rx="6" class="soft"/><text x="1198" y="553" class="small">Associated evidence</text><text x="1198" y="568" class="small">links to submission</text>
+  <rect x="1153" y="579" width="168" height="32" rx="6" class="soft"/><text x="1198" y="599" class="small">Rubric / criteria &amp; weights</text>
+  <path d="M1237 611V625" class="flow"/>
+  <rect x="1153" y="627" width="168" height="124" rx="7" fill="#FFF8F8" stroke="#FFD1D4"/>
+  <text x="1164" y="646" class="small" font-weight="700">Criterion-level evaluation</text>
+  <text x="1164" y="668" class="tiny">Understanding</text><rect x="1250" y="660" width="38" height="10" rx="2" fill="#B9EBC7"/><text x="1303" y="669" class="tiny">4/5</text>
+  <text x="1164" y="690" class="tiny">Justification</text><rect x="1250" y="682" width="30" height="10" rx="2" fill="#FFE08A"/><text x="1303" y="691" class="tiny">3/5</text>
+  <text x="1164" y="712" class="tiny">Evidence</text><rect x="1250" y="704" width="24" height="10" rx="2" fill="#F9B75A"/><text x="1303" y="713" class="tiny">2/5</text>
+  <text x="1164" y="734" class="tiny">Critical reasoning</text><rect x="1250" y="726" width="38" height="10" rx="2" fill="#F58A95"/><text x="1303" y="735" class="tiny">4/5</text>
+  <path d="M644 578H655M884 578H895M1130 578H1142M1332 492H1365" class="flow"/>
+
+  <!-- Outputs -->
+  <rect x="1365" y="446" width="149" height="325" rx="8" class="card" filter="url(#shadow)"/>
+  <text x="1378" y="470" class="cardTitle">Outputs</text>
+  <rect x="1377" y="479" width="125" height="58" rx="6" fill="#F8FAFD"/><text x="1410" y="499" class="small" font-weight="700">Exam trace</text><text x="1410" y="515" class="tiny">questions, answers,</text><text x="1410" y="528" class="tiny">evidence, scores</text>
+  <rect x="1377" y="544" width="125" height="61" rx="6" fill="#F8FAFD"/><text x="1410" y="565" class="small" font-weight="700">Student report</text><text x="1410" y="581" class="tiny">scores, feedback,</text><text x="1410" y="594" class="tiny">strengths, weaknesses</text>
+  <rect x="1377" y="612" width="125" height="69" rx="6" fill="#F8FAFD"/><text x="1410" y="633" class="small" font-weight="700">Professor review</text><text x="1410" y="648" class="small" font-weight="700">&amp; override</text><text x="1410" y="664" class="tiny">review scores, comments</text><text x="1410" y="677" class="tiny">edit if needed</text>
+  <rect x="1377" y="688" width="125" height="68" rx="6" fill="#F8FAFD"/><text x="1410" y="709" class="small" font-weight="700">Auditable decision</text><text x="1410" y="726" class="tiny">final score, evidence,</text><text x="1410" y="739" class="tiny">rationale, versioning</text>
+  <path d="M1443 358V446" class="flow"/>
+
+  <!-- Section 3 -->
+  <rect x="14" y="792" width="1510" height="106" rx="12" class="frame"/>
+  <circle cx="41" cy="807" r="13" fill="#324F7F"/><text x="37" y="812" class="cardTitle white">3</text><text x="69" y="813" class="section">TRACEABLE OUTCOMES</text>
+  <rect x="33" y="823" width="274" height="64" rx="8" class="card"/><text x="99" y="844" class="cardTitle">EXAM TRACE</text><text x="99" y="861" class="small">Questions, answers, evidence links,</text><text x="99" y="876" class="small">exam state, timestamps</text>
+  <rect x="336" y="823" width="273" height="64" rx="8" class="card"/><circle cx="377" cy="850" r="10" fill="#EF4655"/><text x="409" y="844" class="cardTitle">STUDENT REPORT</text><text x="409" y="861" class="small">Criterion scores, feedback,</text><text x="409" y="876" class="small">recommendations</text>
+  <rect x="638" y="823" width="244" height="64" rx="8" class="card"/><text x="700" y="844" class="cardTitle">PROFESSOR REVIEW</text><text x="700" y="861" class="small">Validate / override scores,</text><text x="700" y="876" class="small">add comments</text>
+  <rect x="909" y="823" width="277" height="64" rx="8" class="card"/><text x="975" y="844" class="cardTitle">FINAL ASSESSMENT</text><text x="975" y="861" class="small">Weighted score, rationale,</text><text x="975" y="876" class="small">confidence level</text>
+  <rect x="1213" y="823" width="292" height="64" rx="8" class="card"/><text x="1278" y="844" class="cardTitle">AUDITABLE RECORD</text><text x="1278" y="861" class="small">Immutable log of the assessment</text><text x="1278" y="876" class="small">decision and evidence</text>
+  <path d="M307 855H336M609 855H638M882 855H909M1186 855H1213" class="flow"/><path d="M769 763V823" class="flow"/><path d="M1443 771V823" class="flow"/>
+
+  <!-- Section 4 -->
+  <rect x="14" y="907" width="1510" height="113" rx="12" class="frame"/>
+  <circle cx="41" cy="922" r="13" fill="#324F7F"/><text x="37" y="927" class="cardTitle white">4</text><text x="69" y="928" class="section">TRUSTED PLATFORM &amp; INFRASTRUCTURE</text>
+  <rect x="33" y="932" width="303" height="80" rx="8" class="card"/><text x="98" y="949" class="cardTitle">Identity &amp; Access</text><circle cx="99" cy="963" r="2" fill="#14213D"/><text x="109" y="967" class="small">Authentication &amp; authorization</text><circle cx="99" cy="980" r="2" fill="#14213D"/><text x="109" y="984" class="small">Role-based access (Professor / Student)</text><circle cx="99" cy="997" r="2" fill="#14213D"/><text x="109" y="1001" class="small">Course enrollment, access control</text>
+  <rect x="346" y="932" width="298" height="80" rx="8" class="card"/><text x="415" y="949" class="cardTitle">Data &amp; Provenance</text><circle cx="416" cy="963" r="2" fill="#14213D"/><text x="426" y="967" class="small">Secure storage (courses, submissions, results)</text><circle cx="416" cy="980" r="2" fill="#14213D"/><text x="426" y="984" class="small">Link to original sources; versioning</text><circle cx="416" cy="997" r="2" fill="#14213D"/><text x="426" y="1001" class="small">Data privacy (PII detection, anonymization)</text>
+  <rect x="654" y="932" width="281" height="80" rx="8" class="card"/><text x="715" y="949" class="cardTitle">Model Gateway</text><circle cx="716" cy="963" r="2" fill="#14213D"/><text x="726" y="967" class="small">Access to LLM(s) / local models</text><circle cx="716" cy="980" r="2" fill="#14213D"/><text x="726" y="984" class="small">Tool integration; prompt management</text><circle cx="716" cy="997" r="2" fill="#14213D"/><text x="726" y="1001" class="small">Fallback and model routing</text>
+  <rect x="945" y="932" width="284" height="80" rx="8" class="card"/><text x="1005" y="949" class="cardTitle">Secure Runtimes</text><circle cx="1006" cy="963" r="2" fill="#14213D"/><text x="1016" y="967" class="small">Isolated execution environment</text><circle cx="1006" cy="980" r="2" fill="#14213D"/><text x="1016" y="984" class="small">Safe code execution; resource monitoring</text><circle cx="1006" cy="997" r="2" fill="#14213D"/><text x="1016" y="1001" class="small">Compliance with data protection policies</text>
+  <rect x="1239" y="932" width="266" height="80" rx="8" class="card"/><text x="1302" y="949" class="cardTitle">Monitoring &amp; Fairness</text><circle cx="1303" cy="963" r="2" fill="#14213D"/><text x="1313" y="967" class="small">System usage and performance</text><circle cx="1303" cy="980" r="2" fill="#14213D"/><text x="1313" y="984" class="small">Bias and fairness checks</text><circle cx="1303" cy="997" r="2" fill="#14213D"/><text x="1313" y="1001" class="small">Audit logs and explainability metrics</text>
+</svg>

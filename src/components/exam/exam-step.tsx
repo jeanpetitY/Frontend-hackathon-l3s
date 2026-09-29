@@ -23,13 +23,13 @@ export function ExamStep({ answer, currentIndex, onAnswerChange, onSubmit, quest
 
   return (
     <div className="animate-enter grid gap-5 lg:grid-cols-[280px_1fr]">
-      <aside className="rounded-lg border border-slate-200 bg-white p-5 shadow-sm lg:p-6">
+      <aside className="rounded-lg border border-slate-200 bg-white p-5 shadow-sm dark:border-slate-700 dark:bg-[#22262e] lg:p-6">
         <div className="flex items-center justify-between">
           <p className="text-xs font-bold uppercase tracking-[0.16em] text-slate-400">Live examination</p>
           <span className="flex items-center gap-1.5 text-[11px] font-semibold text-emerald-600"><span className="size-1.5 rounded-full bg-emerald-500" />Active</span>
         </div>
-        <p className="mt-6 text-3xl font-medium tracking-[-0.04em] text-[#3d4351]">{String(currentIndex + 1).padStart(2, "0")}<span className="text-base text-slate-300"> / {String(total).padStart(2, "0")}</span></p>
-        <div className="mt-4 h-1.5 overflow-hidden rounded-full bg-slate-100"><div className="h-full rounded-full bg-[#ef5b60] transition-all" style={{ width: `${progress}%` }} /></div>
+        <p className="mt-6 text-3xl font-medium tracking-[-0.04em] text-[#3d4351] dark:text-slate-100">{String(currentIndex + 1).padStart(2, "0")}<span className="text-base text-slate-300 dark:text-slate-600"> / {String(total).padStart(2, "0")}</span></p>
+        <div className="mt-4 h-1.5 overflow-hidden rounded-full bg-slate-100 dark:bg-slate-700"><div className="h-full rounded-full bg-[#ef5b60] transition-all" style={{ width: `${progress}%` }} /></div>
 
         <div className="mt-8 border-t border-slate-100 pt-6">
           <div className="flex items-center gap-3">
@@ -44,8 +44,8 @@ export function ExamStep({ answer, currentIndex, onAnswerChange, onSubmit, quest
         </div>
       </aside>
 
-      <section className="overflow-hidden rounded-lg border border-slate-200 bg-white shadow-sm">
-        <div className="border-b border-slate-100 px-6 py-5 sm:px-9">
+      <section className="overflow-hidden rounded-lg border border-slate-200 bg-white shadow-sm dark:border-slate-700 dark:bg-[#22262e]">
+        <div className="border-b border-slate-100 px-6 py-5 dark:border-slate-700 sm:px-9">
           <div className="flex flex-wrap items-center justify-between gap-3">
             <span className={`rounded-full px-3 py-1.5 text-[11px] font-bold ring-1 ${categoryStyles[question.category]}`}>{question.category}</span>
             <span className="text-xs font-medium text-slate-400">Adaptive difficulty · Intermediate</span>
@@ -54,17 +54,17 @@ export function ExamStep({ answer, currentIndex, onAnswerChange, onSubmit, quest
 
         <div className="px-6 py-8 sm:px-9 sm:py-10">
           <p className="text-xs font-bold uppercase tracking-[0.16em] text-[#ef5b60]">Question {currentIndex + 1}</p>
-          <h1 className="mt-4 max-w-3xl text-[28px] font-medium leading-[1.22] tracking-[-0.025em] text-[#3d4351] sm:text-[34px]">{question.prompt}</h1>
+          <h1 className="mt-4 max-w-3xl text-[28px] font-medium leading-[1.22] tracking-[-0.025em] text-[#3d4351] dark:text-slate-100 sm:text-[34px]">{question.prompt}</h1>
 
-          <blockquote className="mt-7 rounded-r-md border-l-2 border-[#ef5b60] bg-slate-50 px-5 py-4">
-            <p className="text-sm italic leading-6 text-slate-600">“{question.excerpt}”</p>
+          <blockquote className="mt-7 rounded-r-md border-l-2 border-[#ef5b60] bg-slate-50 px-5 py-4 dark:bg-[#1b1f26]">
+            <p className="text-sm italic leading-6 text-slate-600 dark:text-slate-300">“{question.excerpt}”</p>
             <footer className="mt-2 text-[11px] font-semibold uppercase tracking-wider text-slate-400">{question.source}</footer>
           </blockquote>
 
-          <label className="mt-7 block text-sm font-semibold text-[#3d4351]" htmlFor="answer">Your response</label>
+          <label className="mt-7 block text-sm font-semibold text-[#3d4351] dark:text-slate-200" htmlFor="answer">Your response</label>
           <textarea
             autoFocus
-            className="mt-3 min-h-40 w-full resize-y rounded-md border border-slate-300 bg-[#fbfcfe] px-4 py-3 text-sm leading-6 text-slate-700 outline-none transition placeholder:text-slate-400 focus:border-[#ef5b60] focus:bg-white focus:ring-3 focus:ring-rose-100"
+            className="mt-3 min-h-40 w-full resize-y rounded-md border border-slate-300 bg-[#fbfcfe] px-4 py-3 text-sm leading-6 text-slate-700 outline-none transition placeholder:text-slate-400 focus:border-[#ef5b60] focus:bg-white focus:ring-3 focus:ring-rose-100 dark:border-slate-600 dark:bg-[#191d23] dark:text-slate-200 dark:focus:bg-[#191d23] dark:focus:ring-rose-950"
             id="answer"
             onChange={(event) => onAnswerChange(event.target.value)}
             placeholder="Walk the examiner through your reasoning..."

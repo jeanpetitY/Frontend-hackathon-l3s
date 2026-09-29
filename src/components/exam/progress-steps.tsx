@@ -19,12 +19,12 @@ export function ProgressSteps({ currentStep }: { currentStep: ExamStep }) {
           return (
             <li className="flex flex-1 items-center last:flex-none" key={step.id}>
               <div className="flex items-center gap-2.5">
-                <span className={`grid size-8 place-items-center rounded-full border text-[11px] font-bold transition ${active ? "border-[#ef5b60] bg-[#ef5b60] text-white shadow-[0_5px_14px_rgba(239,91,96,0.2)]" : complete ? "border-[#ef5b60] bg-white text-[#ef5b60]" : "border-slate-200 bg-white text-slate-400"}`}>
+                <span className={`grid size-8 place-items-center rounded-full border text-[11px] font-bold transition ${active ? "border-[#ef5b60] bg-[#ef5b60] text-white shadow-[0_5px_14px_rgba(239,91,96,0.2)]" : complete ? "border-[#ef5b60] bg-white text-[#ef5b60] dark:bg-[#22262e]" : "border-slate-200 bg-white text-slate-400 dark:border-slate-700 dark:bg-[#22262e]"}`}>
                   {complete ? <Icon className="size-4" name="check" /> : step.eyebrow}
                 </span>
-                <span className={`hidden text-xs font-semibold sm:block ${active ? "text-[#3d4351]" : "text-slate-400"}`}>{step.label}</span>
+                <span className={`hidden text-xs font-semibold sm:block ${active ? "text-[#3d4351] dark:text-slate-100" : "text-slate-400"}`}>{step.label}</span>
               </div>
-              {index < steps.length - 1 && <span className={`mx-3 h-px flex-1 sm:mx-5 ${complete ? "bg-[#ef5b60]" : "bg-slate-200"}`} />}
+              {index < steps.length - 1 && <span className={`mx-3 h-px flex-1 sm:mx-5 ${complete ? "bg-[#ef5b60]" : "bg-slate-200 dark:bg-slate-700"}`} />}
             </li>
           );
         })}

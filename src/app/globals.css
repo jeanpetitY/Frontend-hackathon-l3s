@@ -1,8 +1,27 @@
 @import "tailwindcss";
 
+@custom-variant dark (&:where([data-theme="dark"], [data-theme="dark"] *));
+
 :root {
   --background: #f1f3f7;
   --foreground: #2f3440;
+}
+
+[data-theme="dark"] {
+  --background: #16191f;
+  --foreground: #e7e9ee;
+}
+
+.theme-icon-dark {
+  display: none;
+}
+
+[data-theme="dark"] .theme-icon-light {
+  display: none;
+}
+
+[data-theme="dark"] .theme-icon-dark {
+  display: block;
 }
 
 @theme inline {
@@ -26,6 +45,7 @@ body {
   background: var(--background);
   color: var(--foreground);
   font-family: var(--font-sans);
+  transition: background-color 180ms ease, color 180ms ease;
 }
 
 button,
@@ -40,8 +60,8 @@ label {
 }
 
 ::selection {
-  background: rgba(49, 87, 229, 0.18);
-  color: #152142;
+  background: rgba(239, 91, 96, 0.25);
+  color: inherit;
 }
 
 .score-ring {

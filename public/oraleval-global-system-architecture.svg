@@ -1,0 +1,274 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1920" height="1080" viewBox="0 0 1920 1080" fill="none">
+  <defs>
+    <linearGradient id="headerGradient" x1="0" y1="0" x2="1920" y2="210" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#242832"/>
+      <stop offset="1" stop-color="#5F6678"/>
+    </linearGradient>
+    <linearGradient id="coreGradient" x1="590" y1="700" x2="1120" y2="865" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#353B48"/>
+      <stop offset="1" stop-color="#242832"/>
+    </linearGradient>
+    <filter id="shadow" x="-20%" y="-20%" width="140%" height="140%"><feDropShadow dx="0" dy="5" stdDeviation="8" flood-color="#242832" flood-opacity=".10"/></filter>
+    <filter id="strongShadow" x="-20%" y="-20%" width="140%" height="140%"><feDropShadow dx="0" dy="10" stdDeviation="14" flood-color="#242832" flood-opacity=".18"/></filter>
+    <marker id="arrow" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto"><path d="M0 0 10 5 0 10Z" fill="#5F6678"/></marker>
+    <marker id="arrowCoral" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto"><path d="M0 0 10 5 0 10Z" fill="#EF5B60"/></marker>
+    <marker id="arrowWhite" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto"><path d="M0 0 10 5 0 10Z" fill="#FFFFFF"/></marker>
+    <style>
+      text { font-family: "Ubuntu Sans", Ubuntu, "Segoe UI", Arial, sans-serif; font-variation-settings: "wdth" 100; fill: #29303B; }
+      .title { font-size: 36px; font-weight: 650; letter-spacing: -.45px; fill: #FFFFFF; }
+      .subtitle { font-size: 16px; font-weight: 450; fill: #FFFFFF; fill-opacity: .76; }
+      .section { font-size: 12px; font-weight: 650; letter-spacing: 1.45px; fill: #657084; }
+      .module-title { font-size: 19px; font-weight: 650; }
+      .body { font-size: 15px; font-weight: 450; fill: #465263; }
+      .note { font-size: 12.5px; font-weight: 450; fill: #687488; }
+      .artifact-title { font-size: 13px; font-weight: 650; letter-spacing: .65px; }
+      .portal-title { font-size: 22px; font-weight: 650; fill: #FFFFFF; }
+      .portal-subtitle { font-size: 12.5px; font-weight: 450; fill: #FFFFFF; fill-opacity: .72; }
+      .header-section { font-size: 12px; font-weight: 650; letter-spacing: 1.45px; fill: #FFFFFF; fill-opacity: .66; }
+      .core-kicker { font-size: 12.5px; font-weight: 650; letter-spacing: 1.15px; fill: #FF9FA3; }
+      .core-subtitle { font-size: 16px; font-weight: 550; fill: #FFFFFF; }
+      .core-step { font-size: 13.5px; font-weight: 550; fill: #FFFFFF; }
+      .portal-step { font-size: 15px; font-weight: 550; }
+      .chip-title { font-size: 13.5px; font-weight: 650; fill: #FFFFFF; }
+      .chip-note { font-size: 11.5px; font-weight: 450; fill: #FFFFFF; fill-opacity: .72; }
+      .flow { stroke: #596273; stroke-width: 2.2; stroke-linecap: round; stroke-linejoin: round; fill: none; marker-end: url(#arrow); }
+      .assist { stroke: #EF5B60; stroke-width: 2; stroke-linecap: round; stroke-linejoin: round; stroke-dasharray: 7 6; fill: none; marker-end: url(#arrowCoral); }
+      .interaction { stroke: #EF5B60; stroke-width: 2.3; stroke-linecap: round; stroke-linejoin: round; fill: none; marker-end: url(#arrowCoral); }
+      .white-flow { stroke: #FFFFFF; stroke-width: 1.5; fill: none; marker-end: url(#arrowWhite); }
+      .card { fill: #FFFFFF; stroke: #CCD3DD; stroke-width: 1.2; }
+      .artifact { fill: #F0F2F6; stroke: #AEB7C5; stroke-width: 1.1; }
+      .ai-card { fill: #FFF7F7; stroke: #EF5B60; stroke-width: 1.4; stroke-dasharray: 6 5; }
+      .divider { stroke: #D4D9E1; stroke-width: 1; }
+    </style>
+  </defs>
+
+  <rect width="1920" height="1080" fill="#F1F3F7"/>
+
+  <!-- Header and course profiles -->
+  <rect width="1920" height="214" fill="url(#headerGradient)"/>
+  <text x="64" y="62" class="title">OralEval global system architecture</text>
+  <text x="64" y="92" class="subtitle">A role-aware, evidence-grounded platform for adaptive oral assessment across heterogeneous course settings</text>
+
+  <text x="64" y="143" class="header-section">COURSE PROFILES</text>
+
+  <rect x="530" y="118" width="275" height="66" rx="8" fill="#FFFFFF" fill-opacity=".08" stroke="#FFFFFF" stroke-opacity=".15"/>
+  <text x="553" y="146" class="chip-title">SEMINAR</text>
+  <text x="553" y="168" class="chip-note">paper · slides · presentation</text>
+
+  <rect x="822" y="118" width="275" height="66" rx="8" fill="#FFFFFF" fill-opacity=".08" stroke="#FFFFFF" stroke-opacity=".15"/>
+  <text x="845" y="146" class="chip-title">COURSEWORK</text>
+  <text x="845" y="168" class="chip-note">essay · report · homework</text>
+
+  <rect x="1114" y="118" width="275" height="66" rx="8" fill="#FFFFFF" fill-opacity=".08" stroke="#FFFFFF" stroke-opacity=".15"/>
+  <text x="1137" y="146" class="chip-title">THESIS</text>
+  <text x="1137" y="168" class="chip-note">manuscript · data · figures</text>
+
+  <rect x="1406" y="118" width="275" height="66" rx="8" fill="#EF5B60"/>
+  <text x="1429" y="146" class="chip-title">PROGRAMMING</text>
+  <text x="1429" y="168" class="chip-note">code · tests · execution traces</text>
+
+  <rect x="1710" y="128" width="150" height="46" rx="23" fill="#FFFFFF" fill-opacity=".11"/>
+  <circle cx="1736" cy="151" r="6" fill="#EF5B60"/>
+  <text x="1753" y="156" font-size="12" font-weight="500" fill="#FFFFFF">policy-driven</text>
+
+  <!-- Professor portal -->
+  <rect x="64" y="258" width="300" height="654" rx="14" fill="#FFFFFF" stroke="#CBD2DC" filter="url(#shadow)"/>
+  <rect x="64" y="258" width="300" height="88" rx="14" fill="#5F6678"/>
+  <rect x="64" y="332" width="300" height="14" fill="#5F6678"/>
+  <circle cx="106" cy="302" r="17" fill="#FFFFFF" fill-opacity=".17"/>
+  <circle cx="106" cy="296" r="7" fill="#FFFFFF"/>
+  <path d="M94 315c2-8 6-12 12-12s10 4 12 12" fill="#FFFFFF"/>
+  <text x="140" y="299" class="portal-title" fill="#FFFFFF">Professor Studio</text>
+  <text x="140" y="321" class="portal-subtitle">design · approve · moderate</text>
+
+  <text x="92" y="386" class="section">COURSE AUTHORING</text>
+  <circle cx="103" cy="421" r="12" fill="#F1F3F7"/><text x="99" y="426" font-size="12" font-weight="600">1</text>
+  <text x="128" y="426" class="portal-step">Create course space</text>
+  <text x="128" y="447" class="note">profile · roster · teaching materials</text>
+
+  <circle cx="103" cy="487" r="12" fill="#F1F3F7"/><text x="99" y="492" font-size="12" font-weight="600">2</text>
+  <text x="128" y="492" class="portal-step">Author assessment</text>
+  <text x="128" y="513" class="note">task · formats · criteria · weights</text>
+
+  <circle cx="103" cy="553" r="12" fill="#FFF0F0"/><text x="99" y="558" font-size="12" font-weight="600" fill="#EF5B60">3</text>
+  <text x="128" y="558" class="portal-step">Review AI suggestions</text>
+  <text x="128" y="579" class="note">criterion coverage · question policy</text>
+
+  <circle cx="103" cy="619" r="12" fill="#F1F3F7"/><text x="99" y="624" font-size="12" font-weight="600">4</text>
+  <text x="128" y="624" class="portal-step">Approve &amp; release</text>
+  <text x="128" y="645" class="note">students must be enrolled</text>
+
+  <line x1="92" y1="684" x2="336" y2="684" class="divider"/>
+  <text x="92" y="719" class="section">AFTER THE EXAM</text>
+  <text x="92" y="754" class="portal-step">Review uncertain decisions</text>
+  <text x="92" y="780" class="portal-step">Inspect criterion analytics</text>
+  <text x="92" y="806" class="portal-step">Override with justification</text>
+
+  <rect x="92" y="842" width="244" height="42" rx="6" fill="#F1F3F7"/>
+  <circle cx="111" cy="863" r="5" fill="#EF5B60"/>
+  <text x="126" y="868" class="note">Human approval is authoritative</text>
+
+  <!-- Student portal -->
+  <rect x="1556" y="258" width="300" height="654" rx="14" fill="#FFFFFF" stroke="#CBD2DC" filter="url(#shadow)"/>
+  <rect x="1556" y="258" width="300" height="88" rx="14" fill="#5F6678"/>
+  <rect x="1556" y="332" width="300" height="14" fill="#5F6678"/>
+  <circle cx="1598" cy="302" r="17" fill="#FFFFFF" fill-opacity=".17"/>
+  <circle cx="1598" cy="296" r="7" fill="#FFFFFF"/>
+  <path d="M1586 315c2-8 6-12 12-12s10 4 12 12" fill="#FFFFFF"/>
+  <text x="1632" y="299" class="portal-title" fill="#FFFFFF">Student Workspace</text>
+  <text x="1632" y="321" class="portal-subtitle">submit · defend · reflect</text>
+
+  <text x="1584" y="386" class="section">ASSESSMENT JOURNEY</text>
+  <circle cx="1595" cy="421" r="12" fill="#F1F3F7"/><text x="1591" y="426" font-size="12" font-weight="600">1</text>
+  <text x="1620" y="426" class="portal-step">View enrolled courses</text>
+  <text x="1620" y="447" class="note">assessment policy and deadline</text>
+
+  <circle cx="1595" cy="487" r="12" fill="#F1F3F7"/><text x="1591" y="492" font-size="12" font-weight="600">2</text>
+  <text x="1620" y="492" class="portal-step">Submit work</text>
+  <text x="1620" y="513" class="note">format depends on course profile</text>
+
+  <circle cx="1595" cy="553" r="12" fill="#FFF0F0"/><text x="1591" y="558" font-size="12" font-weight="600" fill="#EF5B60">3</text>
+  <text x="1620" y="558" class="portal-step">Take oral examination</text>
+  <text x="1620" y="579" class="note">adaptive questions and follow-ups</text>
+
+  <circle cx="1595" cy="619" r="12" fill="#F1F3F7"/><text x="1591" y="624" font-size="12" font-weight="600">4</text>
+  <text x="1620" y="624" class="portal-step">Receive feedback</text>
+  <text x="1620" y="645" class="note">scores, evidence, recommendations</text>
+
+  <line x1="1584" y1="684" x2="1828" y2="684" class="divider"/>
+  <text x="1584" y="719" class="section">STUDENT REPORT</text>
+  <text x="1584" y="754" class="portal-step">Criterion-level scores</text>
+  <text x="1584" y="780" class="portal-step">Strengths and weaknesses</text>
+  <text x="1584" y="806" class="portal-step">Evidence-linked feedback</text>
+
+  <rect x="1584" y="842" width="244" height="42" rx="6" fill="#FFF0F0"/>
+  <circle cx="1603" cy="863" r="5" fill="#EF5B60"/>
+  <text x="1618" y="868" class="note">Every score is linked to evidence</text>
+
+  <!-- Central architecture -->
+  <text x="418" y="252" class="section">EVIDENCE-GROUNDED ASSESSMENT CORE</text>
+
+  <!-- Authoring artifacts -->
+  <rect x="418" y="276" width="350" height="154" rx="12" class="card" filter="url(#shadow)"/>
+  <rect x="418" y="276" width="350" height="7" rx="3.5" fill="#5F6678"/>
+  <text x="446" y="315" class="module-title">Course Context</text>
+  <text x="446" y="345" class="body">Course profile &amp; learning objectives</text>
+  <text x="446" y="372" class="body">Teaching materials &amp; examples</text>
+  <text x="446" y="399" class="body">Roster &amp; access policy</text>
+
+  <rect x="808" y="276" width="416" height="154" rx="12" class="artifact" filter="url(#shadow)"/>
+  <text x="838" y="312" class="artifact-title">ASSESSMENT CONTRACT</text>
+  <line x1="838" y1="324" x2="1194" y2="324" class="divider"/>
+  <text x="838" y="351" class="body">task · accepted modalities · allowed resources</text>
+  <text x="838" y="378" class="body">criteria · weights · exam policy · deadline</text>
+  <text x="838" y="405" class="note">Versioned and explicitly approved by the professor</text>
+
+  <rect x="1264" y="289" width="238" height="128" rx="12" class="ai-card"/>
+  <text x="1290" y="325" class="module-title">AI Co-designer</text>
+  <text x="1290" y="355" class="body">Analyse materials</text>
+  <text x="1290" y="382" class="body">Suggest criteria</text>
+  <text x="1290" y="405" class="note">Optional · professor-reviewed</text>
+
+  <path d="M364 353H418" class="flow"/>
+  <path d="M768 353H808" class="flow"/>
+  <path d="M1264 353H1224" class="assist"/>
+
+  <!-- Evidence plane -->
+  <rect x="418" y="477" width="350" height="174" rx="12" class="card" filter="url(#shadow)"/>
+  <text x="446" y="515" class="module-title">Modality Gateway</text>
+  <text x="446" y="545" class="body">Validate accepted input format</text>
+  <text x="446" y="572" class="body">Parse documents, slides, data, or code</text>
+  <text x="446" y="599" class="body">Normalize metadata and anonymize PII</text>
+  <text x="446" y="628" class="note">Profile-specific adapters, one common contract</text>
+
+  <rect x="808" y="477" width="416" height="174" rx="12" class="artifact" filter="url(#shadow)"/>
+  <text x="838" y="513" class="artifact-title">UNIFIED EVIDENCE MODEL</text>
+  <line x1="838" y1="525" x2="1194" y2="525" class="divider"/>
+  <text x="838" y="553" class="body">claims · decisions · methods · results</text>
+  <text x="838" y="580" class="body">code entities · tests · traces · references</text>
+  <text x="838" y="607" class="body">weaknesses · confidence · source provenance</text>
+  <text x="838" y="634" class="note">Every extracted element links back to the submission</text>
+
+  <rect x="1264" y="490" width="238" height="148" rx="12" class="ai-card"/>
+  <text x="1290" y="526" class="module-title">Analysis Services</text>
+  <text x="1290" y="556" class="body">Document understanding</text>
+  <text x="1290" y="583" class="body">Reference retrieval</text>
+  <text x="1290" y="610" class="body">Secure code execution</text>
+
+  <path d="M1556 487H1528V454H593V477" class="interaction"/>
+  <path d="M1556 553H1538V674H1100V704" class="interaction"/>
+  <path d="M1224 541H1264" class="flow"/>
+  <path d="M1264 590H1224" class="assist"/>
+  <path d="M768 564H808" class="flow"/>
+  <path d="M1264 564H1224" class="assist"/>
+  <path d="M1016 430V477" class="flow"/>
+
+  <!-- Adaptive core -->
+  <rect x="526" y="704" width="610" height="168" rx="18" fill="url(#coreGradient)" filter="url(#strongShadow)"/>
+  <text x="558" y="740" class="core-kicker">ADAPTIVE ORAL EXAMINATION</text>
+  <text x="558" y="770" class="core-subtitle">Evidence-linked dialogue loop</text>
+
+  <rect x="558" y="795" width="112" height="46" rx="7" fill="#FFFFFF" fill-opacity=".10" stroke="#FFFFFF" stroke-opacity=".18"/>
+  <text x="579" y="823" class="core-step">Select gap</text>
+  <rect x="699" y="795" width="112" height="46" rx="7" fill="#FFFFFF" fill-opacity=".10" stroke="#FFFFFF" stroke-opacity=".18"/>
+  <text x="729" y="823" class="core-step">Question</text>
+  <rect x="840" y="795" width="112" height="46" rx="7" fill="#FFFFFF" fill-opacity=".10" stroke="#FFFFFF" stroke-opacity=".18"/>
+  <text x="875" y="823" class="core-step">Answer</text>
+  <rect x="981" y="795" width="123" height="46" rx="7" fill="#EF5B60"/>
+  <text x="1001" y="823" class="core-step">Update state</text>
+  <path d="M670 818H699" class="white-flow"/>
+  <path d="M811 818H840" class="white-flow"/>
+  <path d="M952 818H981" class="white-flow"/>
+  <path d="M1042 795V780H614V795" stroke="#EF5B60" stroke-width="1.5" fill="none" marker-end="url(#arrowCoral)"/>
+
+  <rect x="1180" y="704" width="322" height="168" rx="14" class="ai-card" filter="url(#shadow)"/>
+  <text x="1208" y="740" class="module-title">Criterion Evaluation</text>
+  <text x="1208" y="770" class="body">Assess answer using rubric + evidence</text>
+  <text x="1208" y="797" class="body">Score · rationale · confidence by criterion</text>
+  <text x="1208" y="824" class="body">Aggregate after criterion coverage</text>
+  <text x="1208" y="851" class="note">Flag uncertainty for professor review</text>
+
+  <path d="M1016 651V682H831V704" class="flow"/>
+  <path d="M1016 651V682H1341V704" class="flow"/>
+  <path d="M1136 788H1180" class="assist"/>
+  <path d="M1502 788H1556" class="interaction"/>
+
+  <!-- Exam decision artifact -->
+  <rect x="650" y="892" width="700" height="38" rx="19" fill="#FFF0F0" stroke="#F0A6A9"/>
+  <text x="682" y="916" class="artifact-title" fill="#A9474B">EXAM TRACE + CRITERION DECISIONS</text>
+  <line x1="998" y1="900" x2="998" y2="922" stroke="#F0A6A9"/>
+  <text x="1022" y="916" class="note">questions · answers · evidence · scores · model versions</text>
+  <path d="M831 872V892" class="assist"/>
+  <path d="M1341 872V886H1283V892" class="assist"/>
+
+  <!-- Foundation -->
+  <rect x="64" y="960" width="1792" height="84" rx="12" fill="#E3E7ED" stroke="#C4CBD5"/>
+  <text x="94" y="988" class="section">TRUSTED PLATFORM FOUNDATION</text>
+
+  <text x="94" y="1022" class="artifact-title">IDENTITY &amp; ACCESS</text>
+  <text x="94" y="1040" class="note">RBAC · enrolment · consent</text>
+  <line x1="380" y1="979" x2="380" y2="1030" class="divider"/>
+
+  <text x="416" y="1022" class="artifact-title">DATA &amp; PROVENANCE</text>
+  <text x="416" y="1040" class="note">versioned artifacts · traces · audit</text>
+  <line x1="732" y1="979" x2="732" y2="1030" class="divider"/>
+
+  <text x="768" y="1022" class="artifact-title">MODEL GATEWAY</text>
+  <text x="768" y="1040" class="note">prompts · model versions · redaction</text>
+  <line x1="1040" y1="979" x2="1040" y2="1030" class="divider"/>
+
+  <text x="1076" y="1022" class="artifact-title">PRIVACY &amp; SECURITY</text>
+  <text x="1076" y="1040" class="note">PII · encryption · secure execution</text>
+  <line x1="1392" y1="979" x2="1392" y2="1030" class="divider"/>
+
+  <text x="1428" y="1022" class="artifact-title">RELIABILITY &amp; FAIRNESS</text>
+  <text x="1428" y="1040" class="note">calibration · bias checks · monitoring</text>
+
+  <!-- Legend -->
+  <line x1="438" y1="942" x2="478" y2="942" class="flow"/>
+  <text x="488" y="947" class="note">verified flow</text>
+  <line x1="594" y1="942" x2="634" y2="942" class="assist"/>
+  <text x="644" y="947" class="note">AI assistance</text>
+  <line x1="760" y1="942" x2="800" y2="942" class="interaction"/>
+  <text x="810" y="947" class="note">human interaction</text>
+</svg>
