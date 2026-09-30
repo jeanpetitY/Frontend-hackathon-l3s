@@ -9,9 +9,9 @@ export type DemoQuestion = {
 };
 
 export const pythonModules = [
-  { chapter: "Module 1", title: "Python foundations", concepts: ["Variables", "Functions", "Classes"] },
-  { chapter: "Module 2", title: "Data Structures", concepts: ["Lists", "Dictionaries", "Tuples", "Sets"], active: true },
-  { chapter: "Module 3", title: "Iteration & algorithms", concepts: ["Loops", "Comprehensions", "Searching"] },
+  { chapter: "Module 1", title: "Language foundations", concepts: ["Variables", "Data types", "Expressions"] },
+  { chapter: "Module 2", title: "Functions & data structures", concepts: ["Functions", "Parameters", "Return values", "Lists", "Dictionaries", "Tuples", "Sets"], active: true },
+  { chapter: "Module 3", title: "Control flow & algorithms", concepts: ["Conditionals", "Loops", "Exceptions", "Searching", "Testing"] },
 ];
 
 export const evaluationLevels = [

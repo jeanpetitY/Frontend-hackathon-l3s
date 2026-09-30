@@ -7,7 +7,7 @@ Next.js interface for the OralEval evidence-based oral assessment workflow.
 The interface sends the uploaded submission to the FastAPI workflow, displays the returned
 evidence and questions, then submits each student answer as form data for evaluation.
 
-The demonstration uses **Programming Fundamentals with Python / Data Structures** and
+The demonstration uses **Programming Fundamentals with Python / Python Programming Fundamentals** and
 shows both the teacher knowledge aspects (`know-what`, `know-how`, `know-why`) and the
 five evaluation criteria. The backend generates a private task pool with two tasks per
 criterion. Every task is presented once, regardless of the score, following the cognitive

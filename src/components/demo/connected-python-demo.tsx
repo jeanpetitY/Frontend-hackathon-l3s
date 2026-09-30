@@ -23,9 +23,27 @@ type UserRole = "student" | "professor";
 
 const COURSE = {
   className: "Programming Fundamentals with Python",
-  module: "Data Structures",
-  concepts: ["Lists", "Dictionaries", "Tuples", "Sets", "Iteration"],
+  module: "Python Programming Fundamentals",
+  concepts: [
+    "Variables",
+    "Data types",
+    "Functions",
+    "Parameters",
+    "Return values",
+    "Lists",
+    "Tuples",
+    "Dictionaries",
+    "Sets",
+    "Loops",
+    "Conditionals",
+    "Classes",
+    "Exceptions",
+    "Algorithms",
+    "Testing",
+  ],
 };
+
+const courseAreas = ["Functions", "Data structures", "Control flow", "Algorithms", "Testing"];
 
 const knowledgeAspectDescription: Record<KnowledgeAspect, string> = {
   "know-what": "Concepts and constructs",
@@ -305,7 +323,7 @@ function ProfessorReviewPhase({ error, isLoading, isPublishing, onPublish, onVie
         {review.items.map((item, index) => (
           <article className="rounded-xl border border-slate-200 bg-white p-5 shadow-sm dark:border-slate-700 dark:bg-[#191e26] sm:p-6" key={item.task_id}>
             <div className="grid gap-5 sm:grid-cols-[1fr_120px]">
-              <div><div className="flex flex-wrap items-center gap-2"><span className="font-mono text-[11px] text-slate-400">{String(index + 1).padStart(2, "0")}</span><span className={`text-sm font-semibold ${criterionTheme[item.level].accent}`}>{item.level}</span><span className="font-mono text-[10px] text-slate-400">{item.knowledge_aspect}</span></div><h2 className="mt-3 text-base font-semibold leading-6 text-slate-800 dark:text-slate-100">{item.question}</h2><div className="mt-4 rounded-lg bg-slate-50 p-4 dark:bg-[#12171e]"><p className="text-[11px] font-semibold uppercase tracking-[0.1em] text-slate-400">Student answer</p><p className="mt-2 text-sm leading-6 text-slate-700 dark:text-slate-200">{item.student_answer}</p></div><p className="mt-4 text-xs leading-5 text-slate-600 dark:text-slate-300"><strong>Agent rationale:</strong> {item.rationale}</p><p className="mt-2 text-xs leading-5 text-slate-500 dark:text-slate-400">Suggested feedback: {item.feedback} · Confidence {Math.round(item.confidence * 100)}%</p></div>
+              <div><div className="flex flex-wrap items-center gap-2"><span className="font-mono text-[11px] text-slate-400">{String(index + 1).padStart(2, "0")}</span><span className={`text-sm font-semibold ${criterionTheme[item.level].accent}`}>{item.level}</span><span className="font-mono text-[10px] text-slate-400">{item.knowledge_aspect}</span><ConfidenceBadge value={item.confidence} /></div><h2 className="mt-3 text-base font-semibold leading-6 text-slate-800 dark:text-slate-100">{item.question}</h2><div className="mt-4 rounded-lg bg-slate-50 p-4 dark:bg-[#12171e]"><p className="text-[11px] font-semibold uppercase tracking-[0.1em] text-slate-400">Student answer</p><p className="mt-2 text-sm leading-6 text-slate-700 dark:text-slate-200">{item.student_answer}</p></div><p className="mt-4 text-xs leading-5 text-slate-600 dark:text-slate-300"><strong>Agent rationale:</strong> {item.rationale}</p><p className="mt-2 text-xs leading-5 text-slate-500 dark:text-slate-400">Suggested feedback: {item.feedback}</p></div>
               <label className="block text-xs font-semibold text-slate-600 dark:text-slate-300">Approved score<input className="mt-2 h-11 w-full rounded-lg border border-slate-300 bg-white px-3 text-lg font-semibold text-slate-900 outline-none transition focus:border-rose-500 focus:ring-3 focus:ring-rose-100 disabled:opacity-70 dark:border-slate-600 dark:bg-[#12171e] dark:text-white dark:focus:ring-rose-950" disabled={published} max="5" min="0" onChange={(event) => setScores((current) => ({ ...current, [item.task_id]: Number(event.target.value) }))} step="0.1" type="number" value={scores[item.task_id] ?? item.score} /><span className="mt-1 block text-right text-[10px] font-normal text-slate-400">out of 5</span></label>
             </div>
           </article>
@@ -378,7 +396,7 @@ function ContextPhase({
     <div className="animate-enter">
       <section className="border-b border-slate-200 bg-[radial-gradient(circle_at_85%_15%,#fff0f0_0,transparent_28%)] bg-white px-5 py-11 dark:border-slate-800 dark:bg-[radial-gradient(circle_at_85%_15%,rgba(239,91,96,0.09)_0,transparent_30%)] dark:bg-[#171b22] sm:px-8 sm:py-16">
         <div className="mx-auto max-w-[1180px]">
-          <p className="inline-flex rounded-full border border-rose-200 bg-rose-50 px-3 py-1.5 text-xs font-semibold text-[#c8464c] dark:border-rose-900/60 dark:bg-rose-950/30 dark:text-rose-300">Programming Fundamentals with Python · Data Structures</p>
+          <p className="inline-flex rounded-full border border-rose-200 bg-rose-50 px-3 py-1.5 text-xs font-semibold text-[#c8464c] dark:border-rose-900/60 dark:bg-rose-950/30 dark:text-rose-300">{COURSE.className} · {COURSE.module}</p>
           <h1 className="mt-5 max-w-3xl text-[38px] font-medium leading-[1.08] tracking-[-0.045em] text-[#272d38] dark:text-[#f5f7fa] sm:text-[54px]">
             Review a student&apos;s code through an oral examination.
           </h1>
@@ -391,12 +409,8 @@ function ContextPhase({
       <div className="mx-auto grid w-full max-w-[1180px] gap-10 px-5 py-10 sm:px-8 lg:grid-cols-[minmax(0,1fr)_320px] lg:py-14">
         <div>
           <div className="mb-4 flex flex-wrap items-center gap-x-5 gap-y-2 text-sm">
-            <span className="font-semibold text-slate-700 dark:text-slate-200">Data Structures</span>
-            <span className="text-slate-500 dark:text-slate-400">Lists</span>
-            <span className="text-slate-500 dark:text-slate-400">Dictionaries</span>
-            <span className="text-slate-500 dark:text-slate-400">Tuples</span>
-            <span className="text-slate-500 dark:text-slate-400">Sets</span>
-            <span className="text-slate-500 dark:text-slate-400">Iteration</span>
+            <span className="font-semibold text-slate-700 dark:text-slate-200">Evaluation scope</span>
+            {courseAreas.map((area) => <span className="text-slate-500 dark:text-slate-400" key={area}>{area}</span>)}
           </div>
 
           <section className="overflow-hidden rounded-xl border border-slate-200 bg-white shadow-[0_12px_35px_rgba(31,41,55,0.06)] dark:border-slate-700 dark:bg-[#191e26] dark:shadow-[0_18px_45px_rgba(0,0,0,0.2)]" id="submission">
@@ -529,7 +543,7 @@ function ReportPhase({ evaluations, onRestart, workflow }: { evaluations: Answer
       <section className="overflow-hidden rounded-xl border border-slate-200 bg-white shadow-[0_12px_35px_rgba(31,41,55,0.06)] dark:border-slate-700 dark:bg-[#191e26] dark:shadow-[0_18px_45px_rgba(0,0,0,0.2)]">
         <div className="border-b border-slate-200 px-6 py-8 dark:border-slate-700 sm:px-9"><p className="text-sm font-medium text-[#ef5b60]">Assessment summary · {workflow.filename}</p><div className="mt-3 flex flex-col gap-5 sm:flex-row sm:items-end sm:justify-between"><div><h1 className="text-3xl font-medium tracking-[-0.035em] text-[#343a46] dark:text-white sm:text-[40px]">Understanding, criterion by criterion.</h1><p className="mt-3 text-sm text-slate-500 dark:text-slate-400">Based on {evaluations.length} oral responses and the submitted code.</p></div><div className="sm:text-right"><p className="text-xs text-slate-400">Overall score</p><p className="mt-1 text-4xl font-semibold text-[#343a46] dark:text-white">{average.toFixed(1)}<span className="text-base font-normal text-slate-400"> / 5</span></p></div></div></div>
         <div className="grid gap-8 p-6 sm:p-9 lg:grid-cols-[1.1fr_0.9fr]">
-          <div><p className="text-sm font-semibold text-slate-700 dark:text-slate-200">Evaluation history</p><div className="mt-5 space-y-6">{evaluations.map((item, index) => <div key={`${item.level}-${index}`}><div className="flex items-end justify-between gap-4"><div><div className="flex items-center gap-2"><p className={`text-sm font-semibold ${criterionTheme[item.level].accent}`}>{item.level}</p><span className="font-mono text-[10px] text-slate-400">{item.knowledge_aspect}</span></div><p className="mt-1 text-xs leading-5 text-slate-400">{item.rationale}</p></div><p className={`text-sm font-bold ${criterionTheme[item.level].accent}`}>{item.score.toFixed(1)} / 5</p></div><div className="mt-2 h-1.5 overflow-hidden bg-slate-100 dark:bg-slate-700"><div className={`h-full ${criterionTheme[item.level].bar}`} style={{ width: `${item.score * 20}%` }} /></div><p className="mt-2 text-[11px] text-slate-500 dark:text-slate-400">{item.feedback} · Confidence {Math.round(item.confidence * 100)}%</p></div>)}</div></div>
+          <div><p className="text-sm font-semibold text-slate-700 dark:text-slate-200">Evaluation history</p><div className="mt-5 space-y-6">{evaluations.map((item, index) => <div key={`${item.level}-${index}`}><div className="flex items-end justify-between gap-4"><div><div className="flex flex-wrap items-center gap-2"><p className={`text-sm font-semibold ${criterionTheme[item.level].accent}`}>{item.level}</p><span className="font-mono text-[10px] text-slate-400">{item.knowledge_aspect}</span><ConfidenceBadge value={item.confidence} /></div><p className="mt-1 text-xs leading-5 text-slate-400">{item.rationale}</p></div><p className={`text-sm font-bold ${criterionTheme[item.level].accent}`}>{item.score.toFixed(1)} / 5</p></div><div className="mt-2 h-1.5 overflow-hidden bg-slate-100 dark:bg-slate-700"><div className={`h-full ${criterionTheme[item.level].bar}`} style={{ width: `${item.score * 20}%` }} /></div><p className="mt-2 text-[11px] text-slate-500 dark:text-slate-400">{item.feedback}</p></div>)}</div></div>
           <aside className="rounded-lg bg-slate-50 p-5 dark:bg-[#12171e]"><p className="text-sm font-semibold text-slate-700 dark:text-slate-200">Feedback</p><div className="mt-6 space-y-5">{strongest && <ReportInsight label={`Strength · ${strongest.level}`} text={strongest.rationale} />}{weakest && <ReportInsight label={`Next focus · ${weakest.level}`} text={weakest.feedback} />}<ReportInsight label="Supporting evidence" text={`${workflow.evidence.length} observations across ${workflow.questions.length} questions.`} /></div></aside>
         </div>
         <div className="flex flex-col gap-4 border-t border-slate-100 px-6 py-5 dark:border-slate-700 sm:flex-row sm:items-center sm:justify-between sm:px-9"><p className="text-xs text-slate-400">{workflow.model}{evaluations.some((item) => item.fallback) && " · demo scoring"}</p><Button onClick={onRestart} type="button" variant="secondary"><Icon className="size-4" name="refresh" />Start again</Button></div>
@@ -572,6 +586,23 @@ function ConceptGroup({ concepts, label }: { concepts: string[]; label: string }
         <p className="mt-2 text-xs text-slate-400">None identified</p>
       )}
     </div>
+  );
+}
+
+function ConfidenceBadge({ value }: { value: number }) {
+  const percentage = Math.round(value * 100);
+  const level = value >= 0.8 ? "High" : value >= 0.6 ? "Medium" : "Low";
+  const style = value >= 0.8
+    ? "border-emerald-200 bg-emerald-50 text-emerald-700 dark:border-emerald-900 dark:bg-emerald-950/30 dark:text-emerald-300"
+    : value >= 0.6
+      ? "border-amber-200 bg-amber-50 text-amber-700 dark:border-amber-900 dark:bg-amber-950/30 dark:text-amber-300"
+      : "border-rose-200 bg-rose-50 text-rose-700 dark:border-rose-900 dark:bg-rose-950/30 dark:text-rose-300";
+
+  return (
+    <span className={`inline-flex items-center gap-1.5 rounded-full border px-2 py-0.5 text-[10px] font-bold ${style}`} title={`Agent confidence: ${percentage}%`}>
+      <span className="size-1.5 rounded-full bg-current" />
+      Confidence {percentage}% · {level}
+    </span>
   );
 }
 
